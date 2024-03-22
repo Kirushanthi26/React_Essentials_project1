@@ -1,12 +1,14 @@
-import CoreConcepts from "./components/CoreConcept/CoreConcepts";
-import Header from "./components/Header";
+import CoreConcepts from "./components/CoreConcept/CoreConcepts.jsx";
+import Examples from "./components/Examples.jsx";
+import Header from "./components/Header.jsx";
 
 function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       <main>
-        <CoreConcepts/>
+        <CoreConcepts />
+        <Examples />
       </main>
     </div>
   );
