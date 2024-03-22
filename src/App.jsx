@@ -1,3 +1,4 @@
+import CoreConcepts from "./components/CoreConcept/CoreConcepts";
 import Header from "./components/Header";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <div>
       <Header/>
       <main>
-        <h2>Time to get started!</h2>
+        <CoreConcepts/>
       </main>
     </div>
   );
