@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TabButton from "./TabButton";
 import Section from "./Section";
 import { EXAMPLES } from "../data";
+import Tabs from "./Tabs";
 
 const Examples = () => {
   const [tabContent, setTabContent] = useState();
@@ -12,32 +13,37 @@ const Examples = () => {
 
   return (
     <Section id="examples" title={"Examples"}>
-      <menu>
-        <TabButton
-          isSelected={tabContent === "components"}
-          onSelect={() => handleSelect("components")}
-        >
-          Components
-        </TabButton>
-        <TabButton
-          isSelected={tabContent === "jsx"}
-          onSelect={() => handleSelect("jsx")}
-        >
-          JSX
-        </TabButton>
-        <TabButton
-          isSelected={tabContent === "props"}
-          onSelect={() => handleSelect("props")}
-        >
-          Props
-        </TabButton>
-        <TabButton
-          isSelected={tabContent === "state"}
-          onSelect={() => handleSelect("state")}
-        >
-          State
-        </TabButton>
-      </menu>
+      <Tabs
+        buttonsContainer="menu"
+        buttons={
+          <>
+            <TabButton
+              isSelected={tabContent === "components"}
+              onSelect={() => handleSelect("components")}
+            >
+              Components
+            </TabButton>
+            <TabButton
+              isSelected={tabContent === "jsx"}
+              onSelect={() => handleSelect("jsx")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={tabContent === "props"}
+              onSelect={() => handleSelect("props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelected={tabContent === "state"}
+              onSelect={() => handleSelect("state")}
+            >
+              State
+            </TabButton>
+          </>
+        }
+      />
 
       {/* instent of initial state value */}
       {!tabContent && <p>Please, select a topic.</p>}
