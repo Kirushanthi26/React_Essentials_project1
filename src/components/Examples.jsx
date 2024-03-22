@@ -1,14 +1,14 @@
 import React from "react";
 import TabButton from "./TabButton";
+import Section from "./Section";
 
 const Examples = () => {
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section id="examples" title={"Examples"}>
       <menu>
         <TabButton>Components</TabButton>
       </menu>
-    </section>
+    </Section>
   );
 };
 

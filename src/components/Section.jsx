@@ -1,7 +1,12 @@
 import React from "react";
 
-const Section = () => {
-  return <div></div>;
+const Section = ({ title, children, ...props }) => {
+  return (
+    <section {...props}>
+      <h2>{title}</h2>
+      {children}
+    </section>
+  );
 };
 
 export default Section;
